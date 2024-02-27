@@ -8,7 +8,7 @@ int subtract(int a, int b) {
     return a - b;
 }
 
-int main() {
+int main(void) {
     int a, b;
 
     printf("Enter first number: ");
@@ -20,5 +20,4 @@ int main() {
     printf("The sum of the two numbers is: %d\n", add(a, b));
     printf("The difference of the two numbers is: %d\n", subtract(a, b));
 
-    return 0;
 }

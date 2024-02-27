@@ -1,4 +1,4 @@
-#include <stdio.h>
+ #include <stdio.h>
 
 void fibonacci(int n) {
     int t1 = 0, t2 = 1, nextTerm = 0;
