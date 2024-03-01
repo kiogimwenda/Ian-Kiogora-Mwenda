@@ -1,38 +1,54 @@
 #include <stdio.h>
 
+void printArray(int arr[], int len) {
+    for(int i = 0; i < len; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+void bubbleSort(int arr[], int len) {
+    for(int i = 0; i < len - 1; i++) {
+        for(int j = 0; j < len - i - 1; j++) {
+            if(arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
 int main() {
-    int nums[7] = {32, 35, 23, 53, 65, 72, 90};
-    int size = sizeof(nums) / sizeof(nums[0]);
-    int pos = 3; // position of the element to be deleted (0-indexed)
-    int deleted_element;
+    int arrayElements[7] = {32, 35, 23, 53, 65, 72, 90};
+    int arraySize = sizeof(arrayElements) / sizeof(arrayElements[0]);
+    int deletePosition = 3;
+    int removedElement;
 
     printf("Original array:\n");
-    for(int i = 0; i < size; i++) {
-        printf("%d ", nums[i]);
-    }
+    bubbleSort(arrayElements, arraySize);
+    printArray(arrayElements, arraySize);
 
-    // Store the deleted element
-    deleted_element = nums[pos];
+    removedElement = arrayElements[deletePosition];
 
-    // Shift elements to the left
-    for(int i = pos; i < size - 1; i++) {
-        nums[i] = nums[i + 1];
+    for(int i = deletePosition; i < arraySize - 1; i++) {
+        arrayElements[i] = arrayElements[i + 1];
     }
-    size--; // Reduce the size of the array
+    arraySize--;
 
     printf("\n\nArray after deleting the 4th element:\n");
-    for(int i = 0; i < size; i++) {
-        printf("%d ", nums[i]);
-    }
+    bubbleSort(arrayElements, arraySize);
+    printArray(arrayElements, arraySize);
 
-    // Add the deleted element back to the end of the array
-    nums[size] = deleted_element;
-    size++; // Increase the size of the array
+    for(int i = arraySize; i > deletePosition; i--) {
+        arrayElements[i] = arrayElements[i - 1];
+    }
+    arrayElements[deletePosition] = removedElement;
+    arraySize++;
 
     printf("\n\nOriginal array after returning the deleted element:\n");
-    for(int i = 0; i < size; i++) {
-        printf("%d ", nums[i]);
-    }
+    bubbleSort(arrayElements, arraySize);
+    printArray(arrayElements, arraySize);
 
     return 0;
 }
