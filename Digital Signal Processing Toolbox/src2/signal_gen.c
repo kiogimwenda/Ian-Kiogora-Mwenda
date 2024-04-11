@@ -14,7 +14,7 @@ Signal generate_signal(const char* signal_type, int length) {
     if (strcmp(signal_type, "sine") == 0) {
         // Generate a sine wave
         for (int i = 0; i < length; i++) {
-            sig.samples[i] = 0.5 * sin((2 * M_PI * i) / length);
+            sig.samples[i] = 0.5 * (float)sin((2 * M_PI * i) / length);
         }
     } else if (strcmp(signal_type, "square") == 0) {
         // Generate a square wave
