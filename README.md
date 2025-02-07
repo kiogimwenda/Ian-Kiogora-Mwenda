@@ -50,7 +50,7 @@ This DSP toolbox is organized into several modules:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/DSP_Toolbox.git
+   git clone https://github.com/kiogimwenda/Ian-Kiogora-Mwenda.git
    cd DSP_Toolbox
    ```
 
