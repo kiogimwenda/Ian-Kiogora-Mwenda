@@ -38,7 +38,36 @@ This DSP toolbox is organized into several modules:
 - **Educational & Extensible:** Ideal for learning DSP concepts and for further extension into more advanced applications.
 
 ## Project Structure
+```bash
+/dsp_toolbox
+   |-- src/
+         |-- main.c             // This file (below)
+         |-- signal_generator.c
+         |-- fir_filter.c
+         |-- iir_filter.c
+         |-- fft.c
+         |-- window.c
+         |-- spectral_analysis.c
+         |-- convolution.c
+         |-- modulation.c
+         |-- io.c
+         |-- utility.c
+   |-- include/
+         |-- signal_generator.h
+         |-- fir_filter.h
+         |-- iir_filter.h
+         |-- fft.h
+         |-- window.h
+         |-- spectral_analysis.h
+         |-- convolution.h
+         |-- modulation.h
+         |-- io.h
+         |-- utility.h
+   |-- tests/                   // (Module unit tests)
+   |-- CMakeLists.txt
+   |-- build                     //Build system
 
+```
 
 ## Requirements
 
